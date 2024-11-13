@@ -9,6 +9,8 @@ CORS(app)  # 모든 도메인 허용
 
 @app.route('/api', methods=['GET'])
 def api():
+  # 어떤 경로로 들어와서 , 어떤 데이터가 서버에 들어옴 
+
     response_data = {
         "message": "Hello, World!",
         "status": "success",
@@ -16,6 +18,7 @@ def api():
             "example_key": "example_value"
         }
     }
+  # 서버로 들어온 데이터를 가공해서 , json 형태로 만든 후 클라이언트에 응답으로 보냄 
     return jsonify(response_data)
 
 if __name__ == '__main__':
