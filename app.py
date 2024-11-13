@@ -22,4 +22,5 @@ def api():
     return jsonify(response_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))  # Render의 PORT 환경 변수를 사용
+    app.run(host="0.0.0.0", port=port)  # Render에서 인식할 수 있도록 host와 port 지정
