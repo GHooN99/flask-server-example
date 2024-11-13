@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS  # Flask-CORS 추가
+import os
 
 app = Flask(__name__)
 CORS(app)  # 모든 도메인 허용
